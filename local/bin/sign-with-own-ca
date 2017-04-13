@@ -1,0 +1,7 @@
+#!/bin/zsh
+if ! [[ -r $1 ]]; then
+	print "Usage: $0 path/to/request.csr" >&2
+	exit 1
+fi
+ca=/etc/ssl/$HOST/root
+sudo openssl x509 -req -CA $ca.crt -CAkey $ca.key -CAcreateserial -sha256 -days 30 -in $1 -out ${1:r}.crt
