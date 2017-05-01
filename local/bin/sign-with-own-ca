@@ -4,4 +4,4 @@ if ! [[ -r $1 ]]; then
 	exit 1
 fi
 ca=/etc/ssl/$HOST/root
-sudo openssl x509 -req -CA $ca.crt -CAkey $ca.key -CAcreateserial -sha256 -days 30 -in $1 -out ${1:r}.crt
+sudo openssl x509 -req -CA $ca.crt -CAkey $ca.key -CAcreateserial -sha256 -days 30  -extensions v3_req -extfile /usr/local/etc/openssl/openssl.cnf -in $1 -out ${1:r}.crt
