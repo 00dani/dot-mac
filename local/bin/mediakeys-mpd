@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+import osxmmkeys
+import subprocess
+import time
+
+commands = {
+    'play_pause': 'toggle',
+    'next_track': 'next',
+    'prev_track': 'cdprev'
+}
+
+class MpdKeys():
+    def __init__(self):
+        def mpdRemote(command, flag):
+            def f():
+                print(command)
+                subprocess.call(['mpc', flag])
+                return False
+            return f
+
+        self.tap = osxmmkeys.Tap()
+        for command, flag in commands.items():
+            self.tap.on(command, mpdRemote(command, flag))
+
+    def run(self):
+        self.tap.start()
+        try:
+            while True: time.sleep(1)
+        except (KeyboardInterrupt, SystemExit):
+            self.tap.stop()
+
+if __name__ == '__main__': MpdKeys().run()
