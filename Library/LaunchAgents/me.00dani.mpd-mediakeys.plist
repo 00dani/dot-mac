@@ -11,12 +11,22 @@
 		</dict>
 	</dict>
 	<key>Label</key>
-	<string>me.00dani.mediakeys-mpd</string>
+	<string>me.00dani.mpd-mediakeys</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.apple.rcd.media.key.events</key>
+		<dict>
+			<key>HideUntilCheckIn</key>
+			<false/>
+			<key>ResetAtClose</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>ProgramArguments</key>
 	<array>
 		<string>zsh</string>
 		<string>-lc</string>
-		<string>exec mediakeys-mpd</string>
+		<string>exec mpd-mediakeys</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
