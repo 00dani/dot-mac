@@ -1,4 +1,4 @@
 #!/bin/bash
 while mpc idle; do
-	open bitbar://refreshPlugin?name=mpd*
+	open -g bitbar://refreshPlugin?name=mpd*
 done
