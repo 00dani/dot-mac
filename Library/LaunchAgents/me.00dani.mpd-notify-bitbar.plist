@@ -3,13 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>KeepAlive</key>
-	<dict>
-		<key>OtherJobActive</key>
-		<dict>
-			<key>homebrew.mxcl.mpd</key>
-			<true/>
-		</dict>
-	</dict>
+	<true/>
 	<key>Label</key>
 	<string>me.00dani.mpd-notify-bitbar</string>
 	<key>ProgramArguments</key>
