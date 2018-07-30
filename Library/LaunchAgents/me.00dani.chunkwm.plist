@@ -5,12 +5,12 @@
 	<key>KeepAlive</key>
 	<true/>
 	<key>Label</key>
-	<string>me.00dani.mpd-mediakeys</string>
+	<string>me.00dani.chunkwm</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>zsh</string>
-		<string>-lc</string>
-		<string>exec mpd-mediakeys</string>
+		<string>/usr/local/bin/chunkwm</string>
+		<string>-c</string>
+		<string>/Users/dani/.config/chunkwm/chunkwmrc</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

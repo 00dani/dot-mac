@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+# The arguments should be a command to run in qutebrowser. If no arguments are
+# provided, then :open -w is run by default.
+cmd=($@)
+(( $# < 1 )) && cmd=(:open -w)
+
+# There should only be one qutebrowser socket, but just in case we only take
+# the first result we find.
+sockets=( ${TMPDIR}qutebrowser/ipc*(N) )
+SOCKET=$sockets[1]
+
+if [[ -w $SOCKET ]]; then
+   # We have a legit socket. Let's send the commands to qutebrowser. Yay!
+   jo target_arg=null protocol_version=1 cwd=$PWD "args[]=$cmd" | socat - UNIX-CONNECT:$SOCKET
+else
+   # No socket. Let's start qutebrowser!
+   open -a qutebrowser.app
+   # If we were given commands to run, we still wanna run them once qutebrowser
+   # starts, so wait a little while and then re-exec this script.
+   if (( $# )); then
+      sleep 5
+      exec qtb "$@"
+   fi
+fi
