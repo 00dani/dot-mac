@@ -169,9 +169,6 @@ rctrl + shift - f : chunkc tiling::window --toggle native-fullscreen
 # toggle window parent zoom
 alt - d : chunkc tiling::window --toggle parent
 
-# toggle window split type
-alt - e : chunkc tiling::window --toggle split
-
 # toggle window fade
 alt - q : chunkc tiling::window --toggle fade
 
