@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>net.kovidgoyal.kitty</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Applications/kitty.app/Contents/MacOS/kitty</string>
+		<string>--directory</string>
+		<string>/Users/dani</string>
+		<string>--listen-on</string>
+		<string>unix:/Users/dani/.cache/kitty/kitty.sock</string>
+		<string>--single-instance</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+</dict>
+</plist>

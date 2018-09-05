@@ -69,8 +69,7 @@
 # launch a new terminal instance when in either 'default' or 'test' mode
 # default, test < cmd - return : open -na /Applications/Terminal.app
 
-rctrl - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance\
-                --directory=$HOME --listen-on=unix:$XDG_CACHE_HOME/kitty/kitty.sock
+rctrl - return : ~/.local/bin/kit new-window --window-type os
 
 # open qutebrowser
 rctrl + shift - return : ~/.local/bin/qtb
