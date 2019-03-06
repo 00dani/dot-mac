@@ -137,10 +137,12 @@ rctrl + shift - 6 : chunkc tiling::window --send-to-desktop 6
 # focus monitor
 rctrl - w : chunkc tiling::monitor -f 1
 rctrl - e : chunkc tiling::monitor -f 2
+rctrl - r : chunkc tiling::monitor -f 3
 
 # send window to monitor and follow focus
 rctrl + shift - w : chunkc tiling::window --send-to-monitor 1; chunkc tiling::monitor -f 1
 rctrl + shift - e : chunkc tiling::window --send-to-monitor 2; chunkc tiling::monitor -f 2
+rctrl + shift - r : chunkc tiling::window --send-to-monitor 3; chunkc tiling::monitor -f 3
 
 # set insertion point for focused container
 # ctrl + alt - f : chunkc tiling::window --use-insertion-point cancel
