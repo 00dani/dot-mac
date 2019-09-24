@@ -1,6 +1,6 @@
 #!/bin/zsh
 for name in ${(k)parameters}; do
-	[[ ${parameters[$name]} == scalar-export* ]] || continue
+	[[ ${parameters[$name]} == scalar-*export* ]] || continue
 	print $name=${(P)name}
-	launchctl setenv $name ${(P)name}
+	launchctl setenv $name "${(P)name}"
 done
