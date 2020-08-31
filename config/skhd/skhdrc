@@ -7,6 +7,10 @@ rctrl - k : yabai -m window --focus prev || yabai -m window --focus last
 cmd         - tab : yabai -m window --focus next || yabai -m window --focus first
 cmd + shift - tab : yabai -m window --focus prev || yabai -m window --focus last
 
+# focus stacked window
+rctrl - n : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+rctrl - p : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+
 # swap window
 rctrl + shift - j : yabai -m window --swap next || yabai -m window --swap first
 rctrl + shift - k : yabai -m window --swap prev || yabai -m window --swap last
