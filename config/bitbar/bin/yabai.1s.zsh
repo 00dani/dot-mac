@@ -14,7 +14,7 @@ yabai==yabai
 
 modes=(
   bsp 🌳
-  monocle 🔍
+  stack 📚
   float ⛵
 )
 typeset -A icons

@@ -141,6 +141,7 @@ alt - s : yabai -m window --toggle sticky
 
 # change layout of desktop
 rctrl - a : yabai -m space --layout bsp
+rctrl - s : yabai -m space --layout stack
 rctrl - d : yabai -m space --layout float
 
 play   : mpc toggle
