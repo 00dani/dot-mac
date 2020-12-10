@@ -151,3 +151,5 @@ rctrl - d : yabai -m space --layout float
 play   : mpc toggle
 rewind : mpc cdprev
 fast   : mpc next
+
+rctrl - b : /usr/local/bin/hs -c 'stackline.config:toggle("appearance.showIcons")'
