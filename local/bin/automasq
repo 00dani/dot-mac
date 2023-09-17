@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 """OSX-based script to watch for changes to network state and write out a
 second resolv.conf file containing the DHCP provided nameservers, intended
 for use with a local resolver such as dnsmasq. This is to workaround the
@@ -84,7 +84,7 @@ def main(filename, options):
     try:
         watcher = Watcher(filename, defaults_filename=options.default,
             append_defaults=options.append_defaults)
-    except KeyboardInterrupt, e:
+    except KeyboardInterrupt as e:
         # exiting
         pass
 
