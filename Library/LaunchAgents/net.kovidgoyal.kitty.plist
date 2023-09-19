@@ -8,12 +8,9 @@
 	<string>net.kovidgoyal.kitty</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Applications/kitty.app/Contents/MacOS/kitty</string>
-		<string>--directory</string>
-		<string>/Users/dani</string>
-		<string>--listen-on</string>
-		<string>unix:/Users/dani/.cache/kitty/kitty.sock</string>
-		<string>--single-instance</string>
+		<string>/bin/zsh</string>
+		<string>-c</string>
+		<string>exec /Applications/kitty.app/Contents/MacOS/kitty --directory ~ --listen-on unix:~/.cache/kitty/kitty.sock --single-instance</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
