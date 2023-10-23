@@ -8,8 +8,9 @@
 	<string>org.insectsarerubbish.automasq</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/Users/dani/.local/bin/automasq</string>
-		<string>/usr/local/etc/resolv.conf</string>
+		<string>/bin/zsh</string>
+		<string>-c</string>
+		<string>exec ~/.local/bin/automasq /usr/local/etc/resolv.conf</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
