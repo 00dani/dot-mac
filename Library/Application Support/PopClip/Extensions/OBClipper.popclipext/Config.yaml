@@ -1,0 +1,13 @@
+---
+name: OBClipper
+identifier: me.00dani.obclipper
+icon: iconify:simple-icons:obsidian
+popclip version: 4225
+options:
+  - identifier: vault
+    label: Vault Name
+    type: string
+    default value: silica
+
+shell script file: clip.zsh
+capture html: true
