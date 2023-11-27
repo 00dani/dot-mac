@@ -1,4 +1,0 @@
-#!/bin/bash
-while mpc idle; do
-	open -g swiftbar://refreshplugin?name=mpd-control
-done
