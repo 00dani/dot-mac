@@ -1,0 +1,3 @@
+;; Karabiner config written for https://github.com/yqrashawn/GokuRakuJoudo
+{:main [{:des "Cmd-Shift-4 to PrintScreen"
+         :rules [[:!CCSS4 :print_screen]]}]}
