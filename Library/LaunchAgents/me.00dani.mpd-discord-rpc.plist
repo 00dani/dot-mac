@@ -6,12 +6,8 @@
 	<true/>
 	<key>Label</key>
 	<string>me.00dani.mpd-discord-rpc</string>
-	<key>ProgramArguments</key>
-	<array>
-		<string>zsh</string>
-		<string>-lc</string>
-		<string>exec mpd-discord-rpc</string>
-	</array>
+	<key>Program</key>
+	<string>/Users/dani/.local/share/cargo/bin/mpd-discord-rpc</string>
 	<key>RunAtLoad</key>
 	<true/>
 </dict>
