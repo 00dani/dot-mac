@@ -1,3 +1,18 @@
 ;; Karabiner config written for https://github.com/yqrashawn/GokuRakuJoudo
-{:main [{:des "Cmd-Shift-4 to PrintScreen"
-         :rules [[:!CCSS4 :print_screen]]}]}
+{:templates {:open-app "open -a \"%s\""}
+ :froms {:calc {:ckey :al_calculator}
+         :mail {:ckey :al_email_reader}
+         :www-back {:ckey :ac_back}
+         :www-forward {:ckey :ac_forward}}
+ :main [{:des "Cmd-Shift-4 to PrintScreen"
+         :rules [[:!CCSS4 :print_screen]]}
+        {:des "CapsLock to Hyper / Application"
+         :rules [[:caps_lock :!CTSleft_option nil {:alone :application :params {:alone 250}}]]}
+        {:des "Calculator key to open Calcbot"
+         :rules [[:calc [:open-app "Calcbot"]]]}
+        {:des "Mail key to open Airmail"
+         :rules [[:mail [:open-app "Airmail"]]]}
+        {:des "WWW Back key to Cmd-["
+         :rules [[:www-back :!Copen_bracket]]}
+        {:des "WWW Forward key to Cmd-]"
+         :rules [[:www-forward :!Cclose_bracket]]}]}
