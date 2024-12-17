@@ -6,11 +6,8 @@
 	<true/>
 	<key>Label</key>
 	<string>net.kovidgoyal.kitty</string>
-	<key>ProgramArguments</key>
-	<array>
-		<string>/Applications/kitty.app/Contents/MacOS/kitty</string>
-		<string>--single-instance</string>
-	</array>
+	<key>Program</key>
+	<string>/Applications/kitty.app/Contents/MacOS/kitty</string>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>WorkingDirectory</key>
