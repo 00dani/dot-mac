@@ -1,0 +1,6 @@
+#!/bin/zsh
+WALLPAPER_PATH=${1:a}
+WALLPAPER_URI=file://$WALLPAPER_PATH
+WALLPAPER_KEY=AllSpacesAndDisplays:Desktop:Content:Choices:0:Files:0:relative
+
+/usr/libexec/PlistBuddy -c "set $WALLPAPER_KEY $WALLPAPER_URI" ~/Library/Application\ Support/com.apple.wallpaper/Store/Index.plist && killall WallpaperAgent
